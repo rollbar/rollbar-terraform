@@ -27,7 +27,22 @@ func resourceRollbarCreate(d *schema.ResourceData, m interface{}) error {
 }
 
 func resourceRollbarRead(d *schema.ResourceData, m interface{}) error {
-    return nil
+/*
+  client := m.(*MyClient)
+
+  // Attempt to read from an upstream API
+  obj, ok := client.Get(d.Id())
+
+  // If the resource does not exist, inform Terraform. We want to immediately
+  // return here to prevent further processing.
+  if !ok {
+  d.SetId("")
+  return nil
+  }
+
+  d.Set("access_token", obj.access_token)
+*/
+  return nil
 }
 
 func resourceRollbarUpdate(d *schema.ResourceData, m interface{}) error {
@@ -35,5 +50,8 @@ func resourceRollbarUpdate(d *schema.ResourceData, m interface{}) error {
 }
 
 func resourceRollbarDelete(d *schema.ResourceData, m interface{}) error {
-    return nil
+  // d.SetId("") is automatically called assuming delete returns no errors, but
+  // it is added here for explicitness.
+  d.SetId("")
+  return nil
 }

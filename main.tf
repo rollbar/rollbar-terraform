@@ -1,3 +1,3 @@
 resource "rollbar" "my-rollbar" {
-  address = "1.2.3.4"
+  access_token = "cf9455c547dd456dbe4b7278b274b951"
 }
