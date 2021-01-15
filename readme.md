@@ -1,1 +1,1 @@
-Prototype for a Rollbar Terraform provider.  Very early WiP!
+ARCHIVED - please see https://github.com/rollbar/terraform-provider-rollbar/
